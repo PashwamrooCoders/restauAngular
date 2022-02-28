@@ -1,0 +1,26 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: cadetblue;
+  border: 3px;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px rgba(241, 214, 58, 0.897);
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+

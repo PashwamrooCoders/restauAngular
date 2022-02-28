@@ -1,0 +1,102 @@
+<!-- With Angular material-->
+ <!--
+<form [formGroup]="reservationForm">
+
+  
+       <mat-form-field appearance="fill"> 
+        <input matInput [matDatepicker]="picker" placeholder="Choisir une Date" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="year" [startAt]="date"></mat-datepicker>
+    </mat-form-field> 
+   
+
+    <mat-form-field appearance="fill">
+        <mat-label>Heure de reservation</mat-label>
+        <mat-select formControlName="time">
+          <mat-option *ngFor="let to of timeOptions" [value]="to">
+            {{to}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre de Personnes</mat-label>
+        <mat-select formControlName="people">
+          <mat-option *ngFor="let po of peopleOptions" [value]="po">
+            {{po}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+</form>
+
+{{reservationForm.value | json}}
+
+--> 
+
+
+
+
+    <form  #f="ngForm" (submit)="finalizeReservation(f)">
+
+      
+           <label class="form-label" for="firstName">Prenom</label>
+         <input class="form-control" matInput type="text"  name="firstName" [(ngModel)]="client.firstName" placeholder="prenom">
+  
+        
+            <label class="form-label" for="lastName">Nom</label>
+            <input class="form-control" matInput type="text"  name="lastName" [(ngModel)]="client.lastName" placeholder="nom">
+        
+      
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" matInput type="email"  name="email" [(ngModel)]="client.email" placeholder="email">
+        
+        
+            <label class="form-label" for="phone">Telephone</label>
+            <input class="form-control" matInput type="tel"  name="phone" [(ngModel)]="client.phone" placeholder="telephone">
+        
+        
+             <input class="btn btn-success" type="submit" value="soumettre"> 
+        
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  version intial sans Angular material
+
+<form [formGroup]="reservationForm">
+
+    <input type="date" formControlName="date">
+    <select formControlName="time">
+        <option *ngFor="let to of timeOptions">{{to}}</option>
+    </select>
+    <select formControlName="people">
+       <option *ngFor="let po of peopleOptions">{{po}}</option>
+    </select>
+    <input type="button" value="reserver">
+</form>
+
+
+{{reservationForm.value | json}}
+
+-->
+
